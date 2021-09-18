@@ -1,6 +1,9 @@
 
-
-
+/* Calculadora Basica
+ * Autor: Oscar Eduardo Ortega Penagos
+ * oeortega23@comunidad.unam.mx
+ * 15 Sep, 2021
+ */
 
 #include <iostream>
 
