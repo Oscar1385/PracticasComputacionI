@@ -2,25 +2,16 @@
 // Created by Oscar Eduardo Ortega Penagos on 14/10/2021.
 //
 
-#ifndef PUNTOS_PUNTO_H
-#define PUNTOS_PUNTO_H
-#include <iostream>
-
-using namespace std;
+#ifndef PUNTO_PUNTO_H
+#define PUNTO_PUNTO_H
 
 class Punto2D{
 public:
     float x, y;
     void SetPosicion(double a, double b);
-    void Trasladar (float temp1, float temp2);
-    void RotarRespectoAlOrigen (float temp1);
-    void Escalar (float temp1, float temp2);
-    float GetX();
-    float GetY();
-
-private:
-    float a, b, c;
-
+    float Escalar(float temp1, float temp2);
+    [[nodiscard]] float GetX() const, GetY() const;
+    float RotarRespectoAlOrigen(float temp1);
+    float Trasladar (float temp1, float temp2);
 };
-
 #endif //PUNTO_PUNTO_H
