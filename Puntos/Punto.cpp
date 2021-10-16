@@ -2,47 +2,39 @@
 // Created by Oscar Eduardo Ortega Penagos on 15/10/2021.
 //
 
-#include <iostream>
 #include <math.h>
-#include <Punto.h>
-#define PI 3.14159265
-
+#define PI 3.1415926536
+#include "Punto.h"
 using namespace std;
-
-Punto2D::Punto2D(){
-    a = 0;
-    b = 0;
-    c = 0;
-}
-
 void Punto2D::SetPosicion(double a, double b) {
-    a = x
-    b = y
+    x=a;
+    y=b;
 }
 
-void Punto2D::Trasladar(float temp1, float temp2) {
-    a = a + temp1;
-    b = b + temp2;
+float Punto2D::Escalar(float temp1, float temp2) {
+    x= x*temp1;
+    y= y*temp2;
+    return 0;
 }
 
-void Punto2D::RotarRespectoAlOrigen(float temp1) {
-    c = a;
-    a = c*cos(temp1*PI/180) - b*sin(temp1*PI/180)
-    b = c*sin(temp1*PI/180) + b*cos(temp1*PI/180)
-}
-
-void Punto2D::Escalar(float temp1, float temp2) {
-    a = a * temp1;
-    b = b * temp2;
-}
-
-float Punto2D::GetX() {
-    return a;
-}
-
-float Punto2D::GetY() {
-    return b;
+float Punto2D::RotarRespectoAlOrigen(float temp1) {
+    temp1= temp1 * PI / 180;
+    float xe=x;
+    x= (x*cos(temp1))-(y*sin(temp1));
+    y= (xe*sin(temp1))+(y*cos(temp1));
+    return 0;
 }
 
 
+float Punto2D::Trasladar(float temp1, float temp2) {
+    x=x+temp1;
+    y=y+temp2;
+    return 0;
+}
 
+float Punto2D::GetX() const {
+    return x;
+}
+float Punto2D::GetY() const {
+    return y;
+}
