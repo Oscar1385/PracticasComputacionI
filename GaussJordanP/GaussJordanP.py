@@ -1,3 +1,4 @@
+
 # Autor: Oscar Eduardo Ortega Penagos
 
 import numpy as np
@@ -36,7 +37,6 @@ for i in range(n):
 print('\nRequired solution is: ')
 for i in range(n):
     print('X%d = %0.2f' % (i, x[i]), end='\t')
-
 
 
 
